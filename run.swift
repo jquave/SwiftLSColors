@@ -4,6 +4,8 @@ import Foundation
 
 let fileManager = NSFileManager.defaultManager()
 
-let contents = fileManager.directoryContentsAtPath(".")
+let contents = fileManager.directoryContentsAtPath(".") as String[]
 
-println(contents)
+for item: String in contents {
+  println(item)
+}
