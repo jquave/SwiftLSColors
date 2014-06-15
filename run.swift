@@ -2,21 +2,8 @@
 
 import Foundation
 
-println(C_ARGC)
-println(C_ARGV[1])
+let fileManager = NSFileManager.defaultManager()
 
-println("\x1B[31m");
+let contents = fileManager.directoryContentsAtPath(".")
 
-func input() -> String {
-    var keyboard = NSFileHandle.fileHandleWithStandardInput()
-    var inputData = keyboard.availableData
-    return NSString(data: inputData, encoding:NSUTF8StringEncoding)
-}
-
-func ask(question: String!) -> String {
-  println("\(question)")
-  return input()
-}
-
-var age = ask("How old are you?").toInt()
-
+println(contents)
