@@ -4,8 +4,12 @@ import Foundation
 
 let fileManager = NSFileManager.defaultManager()
 
-let contents = fileManager.directoryContentsAtPath(".") as String[]
+let path = "./"
+let contents = fileManager.directoryContentsAtPath(path) as String[]
 
 for item: String in contents {
-  println(item)
+  var isDirectory: ObjCBool = false
+  let fullPath = "\(path)\(item)"
+  fileManager.fileExistsAtPath(fullPath, isDirectory: &isDirectory)
+  println("\(fullPath): \(isDirectory)")
 }
