@@ -8,3 +8,8 @@ fi
 
 echo "To use lss anywhere from this shell, type:"
 echo "export PATH=\$PATH:$PWD/bin/"
+echo ""
+echo "##### Running build #####"
+echo ""
+
+./bin/lss
