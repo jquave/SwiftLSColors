@@ -4,7 +4,7 @@ if [ ! -d "bin" ]; then
   mkdir bin
 fi
 
-/usr/bin/env xcrun swift run.swift -sdk /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -o bin/lss
+/usr/bin/env xcrun swift lss.swift -sdk /Applications/Xcode6-Beta.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk -o bin/lss
 
 echo "To use lss anywhere from this shell, type:"
 echo "export PATH=\$PATH:$PWD/bin/"
